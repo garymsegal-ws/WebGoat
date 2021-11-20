@@ -9,8 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Check Java
+        run: java --version
       - name: Build project with Maven
-        run: java -version
         run: mvn clean install
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
