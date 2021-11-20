@@ -1,4 +1,6 @@
-- name: Dependency Check
+name: Depdendency CHeck
+
+on: [commit]
 
 jobs:
   depchecktest:
