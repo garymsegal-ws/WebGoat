@@ -9,8 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Check Java
-        run: java --version
+      - name: Update Java
+        run: |
+           apt update -y
+           apt install -y openjdk-16-jdk
+           java --version
       - name: Build project with Maven
         run: mvn clean install -DskipTests
       - name: Depcheck
