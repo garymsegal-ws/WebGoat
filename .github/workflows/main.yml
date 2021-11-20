@@ -1,6 +1,6 @@
 name: Depdendency CHeck
 
-on: [commit]
+on: [push]
 
 jobs:
   depchecktest:
