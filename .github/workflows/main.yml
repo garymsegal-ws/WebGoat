@@ -1,4 +1,4 @@
-name: Depdendency CHeck
+name: Depdendency Check
 
 on: [push]
 
@@ -19,9 +19,11 @@ jobs:
           
       - name: Java info
         run: |
+          echo which java:
           which java
+          echo java -versions
           java -version
-          echo $JAVA_HOME
+          echo JAVA_HOME: $JAVA_HOME
 
       - name: Build project with Maven
         run: mvn clean install -DskipTests
