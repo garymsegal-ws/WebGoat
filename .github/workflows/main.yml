@@ -29,7 +29,9 @@ jobs:
         run: mvn clean install -DskipTests
         
       - name: Set JAVA_HOME for DC
-        run: export JAVA_HOME=/opt/jdk
+        run: |
+          export JAVA_HOME=/opt/jdk
+          echo JAVA_HOME: $JAVA_HOME
       
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
