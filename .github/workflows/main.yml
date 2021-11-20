@@ -18,10 +18,10 @@ jobs:
           architecture: x64
           
       - name: Java info
-          run |
-            which java
-            java -version
-            echo $JAVA_HOME
+        run: |
+          which java
+          java -version
+          echo $JAVA_HOME
 
       - name: Build project with Maven
         run: mvn clean install -DskipTests
